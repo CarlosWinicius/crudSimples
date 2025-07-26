@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.ui.UserCreationController"
+      spacing="10" alignment="CENTER" prefWidth="450" prefHeight="450">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+
+    <Label text="Gerenciar Usuários" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- Campos de entrada -->
+    <TextField fx:id="nameField" promptText="Nome" />
+    <TextField fx:id="emailField" promptText="E-mail" />
+
+    <!-- Botões de operações -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Criar" onAction="#handleCreateUser" />
+        <Button text="Atualizar" onAction="#handleUpdateUser" />
+        <Button text="Deletar" onAction="#handleDeleteUser" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Buscar" onAction="#handleFindUser" />
+        <Button text="Listar Todos" onAction="#handleFindAllUsers" />
+    </HBox>
+
+    <!-- Área de saída -->
+    <Label text="Resultado:" style="-fx-font-weight: bold;" />
+    <TextArea fx:id="resultArea" prefWidth="400" prefHeight="150" editable="false" wrapText="true" />
+
+</VBox>
